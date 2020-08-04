@@ -26,12 +26,12 @@ namespace Domain.InMemory.Services
             Initialize();
         }
 
-        public async Task<Guid> CreateEmployeeAsync(Employee newEmployee)
+        public async Task<string> CreateEmployeeAsync(Employee newEmployee)
         {
-            return await Task.Run(new Func<Guid>(() =>
+            return await Task.Run(new Func<string>(() =>
             {
 
-                var newId = Guid.NewGuid();
+                var newId = Guid.NewGuid().ToString();
                 newEmployee.Id = newId;
 
                 _employees.Add(newEmployee);
@@ -50,7 +50,7 @@ namespace Domain.InMemory.Services
             return _employees;
         }
 
-        public async Task<Employee> FindEmployeeAsync(Guid employeeId)
+        public async Task<Employee> FindEmployeeAsync(string employeeId)
         {
             return await Task.Run(new Func<Employee>(() =>
             {
@@ -60,12 +60,12 @@ namespace Domain.InMemory.Services
             }));
         }
 
-        public async Task<bool> EmployeeExistsAsync(Guid employeeId)
+        public async Task<bool> EmployeeExistsAsync(string employeeId)
         {
             return (await FindEmployeeAsync(employeeId) != null);
         }
 
-        public async Task<bool> DeleteEmployeeAsync(Guid employeeId)
+        public async Task<bool> DeleteEmployeeAsync(string employeeId)
         {
             var employee = await FindEmployeeAsync(employeeId);
 
@@ -123,7 +123,7 @@ namespace Domain.InMemory.Services
 
                 return new List<Employee>() {
 
-                    new Employee(){ Id = Guid.NewGuid(),
+                    new Employee(){ Id = Guid.NewGuid().ToString(),
                         FirstName = "MD TAREQ",
                         LastName = "HASSAN",
                         Email = "hassan@hovermind.com",
@@ -133,17 +133,17 @@ namespace Domain.InMemory.Services
                         AvatarIcon = avatarBase64String
                     },
 
-                    new Employee(){ Id = Guid.NewGuid(),
+                    new Employee(){ Id = Guid.NewGuid().ToString(),
                         FirstName = "JIM",
                         LastName = "BORDEN",
                         Email = "jim@hovermind.com",
                         JoinDate = Convert.ToDateTime("2010/05/11"),
-                        EmployedRegion = Region.Asia,
+                        EmployedRegion = Region.America,
                         Rank = Ranks.ElementAt(4),
                         AvatarIcon = avatarBase64String
                     },
 
-                    new Employee(){ Id = Guid.NewGuid(),
+                    new Employee(){ Id = Guid.NewGuid().ToString(),
                         FirstName = "OLEKSANDR",
                         LastName = "DROPAILO",
                         Email = "olek@hovermind.com",
@@ -153,7 +153,7 @@ namespace Domain.InMemory.Services
                         AvatarIcon = avatarBase64String
                     },
 
-                    new Employee(){ Id = Guid.NewGuid(),
+                    new Employee(){ Id = Guid.NewGuid().ToString(),
                         FirstName = "SHEIKH",
                         LastName = "ASHADUZZAMAN",
                         Email = "asad@hovermind.com",
@@ -163,9 +163,9 @@ namespace Domain.InMemory.Services
                         AvatarIcon = avatarBase64String
                     },
 
-                    new Employee(){ Id = Guid.NewGuid(),
-                        FirstName = "SHEIKH",
-                        LastName = "ASHADUZZAMAN",
+                    new Employee(){ Id = Guid.NewGuid().ToString(),
+                        FirstName = "SAHIDUL",
+                        LastName = "ISLAM",
                         Email = "sahidul@hovermind.com",
                         JoinDate = Convert.ToDateTime("2015/03/25"),
                         EmployedRegion = Region.Africa,

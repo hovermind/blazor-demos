@@ -1,0 +1,84 @@
+﻿@page "/employees/delete/{Id}"
+@inject NavigationManager NavigationManager
+@inherits DeleteBase
+
+
+<h1>Delete</h1>
+
+<hr />
+
+<div class="alert alert-warning" role="alert">
+    Are you sure you want to delete the following entry?
+</div>
+<br />
+
+<div class="row mt-2">
+    <div class="col-2 text-left pl-0">
+
+    </div>
+    <div class="col">
+        <img src="data:image/html;base64,@Employee.AvatarIcon" alt="Avatar Icon of @Employee.LastName" />
+    </div>
+</div>
+
+
+<div class="row mt-2">
+    <div class="col-2 text-right">
+        <b>Id :</b>
+    </div>
+    <div class="col text-left pl-0">
+        @Employee.Id
+    </div>
+</div>
+
+<div class="row mt-2">
+    <div class="col-2 text-right">
+        <b>First Name :</b>
+    </div>
+    <div class="col text-left pl-0">
+        @Employee.FirstName
+    </div>
+</div>
+
+<div class="row mt-2">
+    <div class="col-2 text-right">
+        <b>Last Name :</b>
+    </div>
+    <div class="col text-left pl-0">
+        @Employee.LastName
+    </div>
+</div>
+
+<div class="row mt-2">
+    <div class="col-2 text-right">
+        <b>Email :</b>
+    </div>
+    <div class="col text-left pl-0">
+        @Employee.Email
+    </div>
+</div>
+
+<div class="row mt-2">
+    <div class="col-2 text-right">
+        <b>Employed Region :</b>
+    </div>
+    <div class="col text-left pl-0">
+        @Employee.EmployedRegion
+    </div>
+</div>
+
+<div class="row mt-2">
+    <div class="col-2 text-right">
+        <b>Rank :</b>
+    </div>
+    <div class="col text-left pl-0">
+        @Employee.Rank?.Name
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col offset-2 form-group pl-0">
+        <input type="submit" value="Delete" class="btn btn-danger" @onclick="PerformDeletion" />
+        <input type="submit" value="Retrun to Home" class="btn btn-success ml-5" @onclick="@( () => NavigationManager.NavigateTo("/") )" />
+    </div>
+</div>

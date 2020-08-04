@@ -10,13 +10,13 @@ namespace Domain.InMemory.Services
     public interface IEmployeeService
     {
         // C -> Create
-        Task<Guid> CreateEmployeeAsync(Employee newEmployee);
+        Task<string> CreateEmployeeAsync(Employee newEmployee);
 
 
         // R -> Read
         Task<List<Employee>> GetEmployeesAsync(); // all
-        Task<Employee> FindEmployeeAsync(Guid employeeId); // single employee
-        Task<bool> EmployeeExistsAsync(Guid employeeId); // uses FindEmployeeAsync() in method body
+        Task<Employee> FindEmployeeAsync(string employeeId); // single employee
+        Task<bool> EmployeeExistsAsync(string employeeId); // uses FindEmployeeAsync() in method body
 
 
         // U -> Update
@@ -24,6 +24,6 @@ namespace Domain.InMemory.Services
 
 
         // D - Delete
-        Task<bool> DeleteEmployeeAsync(Guid employeeId); // uses FindEmployeeAsync() + SaveChangesAsync() in method body
+        Task<bool> DeleteEmployeeAsync(string employeeId); // uses FindEmployeeAsync() + SaveChangesAsync() in method body
     }
 }
