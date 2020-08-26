@@ -6,21 +6,5 @@
 <hr class="mb-sm-5" />
 
 
-<h3 class="mb-sm-5">LoggedIn User: @CurrentLoggedInUser </h3>
-
-
-<h3>List of Claims: </h3>
-
-@if (LoggedInUserClaims != null && LoggedInUserClaims.Any())
-{
-    @foreach (var claim in LoggedInUserClaims)
-    {
-        <ul>
-            <li>@claim</li>
-        </ul>
-    }
-}
-else
-{
-    <h3>No claims for loggedin user</h3>
-}
+<h3 class="mb-sm-5">LoggedIn User Name: @LoggedInUser.FullName </h3>
+<h3 class="mb-sm-5">LoggedIn User Email: @LoggedInUser.EmailAddress </h3>

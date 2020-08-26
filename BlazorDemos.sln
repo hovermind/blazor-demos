@@ -10,7 +10,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.CrudApp.InMemory", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.InMemory", "Domain.InMemory\Domain.InMemory.csproj", "{85D72D4B-6E10-4FB7-A454-5058BBBE9716}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureAppServiceEasyAuth", "AzureAppServiceEasyAuth\AzureAppServiceEasyAuth.csproj", "{57254FD6-9021-477C-B755-F50E611DCF92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureAppServiceEasyAuth", "AzureAppServiceEasyAuth\AzureAppServiceEasyAuth.csproj", "{57254FD6-9021-477C-B755-F50E611DCF92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
