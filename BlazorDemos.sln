@@ -12,7 +12,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.InMemory", "Domain.I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureAppServiceEasyAuth", "AzureAppServiceEasyAuth\AzureAppServiceEasyAuth.csproj", "{57254FD6-9021-477C-B755-F50E611DCF92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppServiceLoggingBlobStorage", "AppServiceLoggingBlobStorage\AppServiceLoggingBlobStorage.csproj", "{10037F36-504E-45A1-B1EC-783451824EED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppServiceLoggingBlobStorage", "AppServiceLoggingBlobStorage\AppServiceLoggingBlobStorage.csproj", "{10037F36-504E-45A1-B1EC-783451824EED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToastMessage", "ToastMessage\ToastMessage.csproj", "{F008C669-037B-424E-A7DE-E743431C80C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spinner.Server", "Spinner.Server\Spinner.Server.csproj", "{B5D624A3-AA2B-4EC2-90D8-758384C941CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +40,14 @@ Global
 		{10037F36-504E-45A1-B1EC-783451824EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10037F36-504E-45A1-B1EC-783451824EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10037F36-504E-45A1-B1EC-783451824EED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F008C669-037B-424E-A7DE-E743431C80C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F008C669-037B-424E-A7DE-E743431C80C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F008C669-037B-424E-A7DE-E743431C80C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F008C669-037B-424E-A7DE-E743431C80C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5D624A3-AA2B-4EC2-90D8-758384C941CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5D624A3-AA2B-4EC2-90D8-758384C941CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5D624A3-AA2B-4EC2-90D8-758384C941CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5D624A3-AA2B-4EC2-90D8-758384C941CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

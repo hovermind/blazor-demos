@@ -1,0 +1,19 @@
+﻿@namespace Spinner.Server.Components
+@inherits SpinnerBase
+
+@switch (DefaultSpinner)
+{
+    case SpinnerType.Circle:
+        <Circle Center="@Center" Size="@Size" Color="@Color" @attributes="AdditionalAttributes" />
+        break;
+    case SpinnerType.CircleFade:
+        <CircleFade Center="@Center" Size="@Size" Color="@Color" @attributes="AdditionalAttributes" />
+        break;
+    default:
+        <CircleFade Center="@Center" Size="@Size" Color="@Color" @attributes="AdditionalAttributes" />
+        break;
+}
+
+@code {
+    [Parameter] public SpinnerType DefaultSpinner { get; set; }
+}
