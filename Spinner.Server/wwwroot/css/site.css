@@ -181,3 +181,11 @@ app {
         display: block;
     }
 }
+
+
+
+/* Spinner realted */
+:root {
+    --sk-size: 6rem;
+    --sk-color: #cf4b00;
+}
